@@ -81,6 +81,6 @@ ej_trend <- dfs |>
   ) |>
   dplyr::mutate(year = stringr::str_extract(table, "\\d{4}") |> as.numeric()) |>
   dplyr::select(year, bg = id, total_pop = acstotpop, everything(), -table) |>
-  dplyr::as_tibble()
+  tibble::as_tibble()
 
 usethis::use_data(ej_trend, overwrite = TRUE)

@@ -21,9 +21,9 @@ OpenStreetMap database via the \href{https://github.com/ropensci/osmdata}{\code{
 nonres_sf
 }
 \description{
-An \code{sf} object of data from OpenStreetMap of large nonresidential areas in Maryland. There are several census tracts with very few households that coincide with industrial sites, prisons, and other nonresidential properties, and this is an attempt to identify some of them.
+An \code{sf} object of data from OpenStreetMap of large nonresidential areas in Maryland. There are several census tracts with very few households that coincide with industrial sites, prisons, and other nonresidential properties, and this is an attempt to identify some of them. It's not perfect, but should help with some mysteries of missing or weird data.
 }
 \examples{
-head(nonres_sf)
+ head(nonres_sf)
 }
 \keyword{datasets}

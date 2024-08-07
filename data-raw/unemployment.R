@@ -22,6 +22,6 @@ unemployment <- fabletools::components(unemp_adj) |>
   dplyr::select(name, date, reported_rate = rate, adjusted_rate = season_adjust) |>
   dplyr::mutate(date = as.Date(date)) |>
   dplyr::mutate(dplyr::across(c(reported_rate, adjusted_rate), \(x) x / 100)) |>
-  dplyr::as_tibble()
+  tibble::as_tibble()
 
 usethis::use_data(unemployment, overwrite = TRUE)

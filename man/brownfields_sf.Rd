@@ -30,6 +30,6 @@ brownfields_sf
 A \code{sf} data frame of basic information on brownfields and national priority list (superfund) sites in Maryland. This is a subset of data from the Maryland Department of the Environment's (MDE) Land Restoration Program, filtered for sites that are listed as brownfields, NPL sites, or both.
 }
 \examples{
-head(brownfields_sf)
+ head(brownfields_sf)
 }
 \keyword{datasets}

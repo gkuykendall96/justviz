@@ -24,5 +24,5 @@ This is a rewrite of \code{OasisR::HLoc}, an implementation of the Shannon-Weine
  diversity(race)
 }
 \seealso{
-\link[OasisR:HLoc]{OasisR::HLoc}
+OasisR::HLoc now defunct
 }

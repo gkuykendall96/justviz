@@ -8,7 +8,7 @@ url <- "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Publi
 art <- jsonlite::read_json(url)[["features"]]
 art <- purrr::map(art, \(x) x[["attributes"]])
 art <- purrr::map(art, purrr::compact)
-art <- purrr::map(art, dplyr::as_tibble)
+art <- purrr::map(art, tibble::as_tibble)
 art <- dplyr::bind_rows(art)
 art <- janitor::clean_names(art)
 art <- dplyr::rename(art, loc_tmp = location)
@@ -29,5 +29,8 @@ art_sf <- sf::st_transform(art_sf, sf::st_crs(county_sf))
 # filter for just those counties
 art_sf <- sf::st_join(art_sf, county_sf, left = FALSE)
 art_sf <- dplyr::select(art_sf, id, county, dplyr::everything())
+
+# make back into data.frame, not tibble
+art_sf <- sf::st_as_sf(as.data.frame(art_sf))
 
 usethis::use_data(art_sf, overwrite = TRUE)

@@ -23,7 +23,7 @@ canopy <- load_land_cover("canopy")
 canopy
 \dontrun{
   if (interactive()) {
-    plot(canopy)
+    terra::plot(canopy)
   }
 }
 }

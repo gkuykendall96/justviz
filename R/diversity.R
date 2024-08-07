@@ -14,7 +14,7 @@
 #'  diversity(race)
 #' @export
 #' @rdname diversity
-#' @seealso [OasisR::HLoc]
+#' @seealso OasisR::HLoc now defunct
 #'
 #' @import cli
 diversity <- function(x) {

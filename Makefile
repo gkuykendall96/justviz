@@ -21,7 +21,7 @@ all: $(datasets) $(rasters) document check readme
 check: DESCRIPTION
 	$(R_CMD) "devtools::check(cran = FALSE)"
 
-document:
+document: datasets
 	$(R_CMD) "devtools::document()"
 
 vignettes: vignettes/*.Rmd

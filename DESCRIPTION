@@ -11,9 +11,10 @@ Depends:
 Imports: 
     classInt,
     cli,
-    terra
-Suggests: 
     sf,
+    terra,
+    tibble
+Suggests: 
     camiller (>= 0.2.3),
     cwi (>= 1.6.3),
     dplyr,
@@ -27,7 +28,6 @@ Suggests:
     purrr,
     readr,
     stringr,
-    tibble,
     tidycensus,
     tidyr,
     tigris,
@@ -36,7 +36,7 @@ Suggests:
 Remotes: 
     CT-Data-Haven/cwi,
     camille-s/camiller
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 Authors@R: 
     c(person("Camille", "Seaberry", , "camille.seaberry@gmail.com", role = c("cre", "aut"), 

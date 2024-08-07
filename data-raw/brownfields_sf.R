@@ -17,6 +17,9 @@ brownfields_sf <- dplyr::summarise(brownfields_sf, site_type = toString(site_typ
 brownfields_sf <- dplyr::ungroup(brownfields_sf)
 brownfields_sf$site_type <- forcats::fct_recode(as.factor(brownfields_sf$site_type), "both" = "brownfield, npl")
 
+# make back into data.frame, not tibble
+brownfields_sf <- sf::st_as_sf(as.data.frame(brownfields_sf))
+# test
 
 usethis::use_data(brownfields_sf, overwrite = TRUE)
 

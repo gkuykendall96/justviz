@@ -83,7 +83,7 @@
 #'   \item{geometry}{POINT. Location.}
 #' }
 #' @examples
-#' head(brownfields_sf)
+#'  head(brownfields_sf)
 #' @source Maryland Department of the Environment Land Restoration Program, available at [https://mdewin64.mde.state.md.us/LRP/index.html](https://mdewin64.mde.state.md.us/LRP/index.html)
 "brownfields_sf"
 
@@ -178,7 +178,7 @@
 
 #' @title Shapefile of nonresidential areas
 #' @description
-#' An `sf` object of data from OpenStreetMap of large nonresidential areas in Maryland. There are several census tracts with very few households that coincide with industrial sites, prisons, and other nonresidential properties, and this is an attempt to identify some of them.
+#' An `sf` object of data from OpenStreetMap of large nonresidential areas in Maryland. There are several census tracts with very few households that coincide with industrial sites, prisons, and other nonresidential properties, and this is an attempt to identify some of them. It's not perfect, but should help with some mysteries of missing or weird data.
 #' @format An sf data frame with `r nrow(nonres_sf)` rows and `r ncol(nonres_sf)` variables:
 #' \describe{
 #'   \item{type}{Factor. Site type: one of airport, industrial, military, prison, or protected area. These refer to the keys used to retrieve data from OSM, though some may have matched multiple keys (duplicates were removed).}
@@ -188,7 +188,7 @@
 #'   \item{is_low_res}{Logical. Gives whether the site intersects with a low-residential tract, defined as tracts with fewer than 500 households based on the 2022 ACS.}
 #' }
 #' @examples
-#' head(nonres_sf)
+#'  head(nonres_sf)
 #' @source OpenStreetMap database via the [`osmdata`](https://github.com/ropensci/osmdata) package, and American Community Survey 2022 5-year estimates via [`tidycensus`](https://github.com/walkerke/tidycensus).
 "nonres_sf"
 

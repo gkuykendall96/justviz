@@ -8,7 +8,7 @@
 #' canopy
 #' \dontrun{
 #'   if (interactive()) {
-#'     plot(canopy)
+#'     terra::plot(canopy)
 #'   }
 #' }
 #' @export
